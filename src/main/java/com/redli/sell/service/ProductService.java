@@ -26,11 +26,11 @@ public interface ProductService {
 
     ProductInfo save(ProductInfo productInfo);
 
-    void increaseStock();
+   /* void increaseStock();
 
     void decreaseStock();
 
     ProductInfo onSale(String productId);
 
-    ProductInfo offSale(String productId);
+    ProductInfo offSale(String productId);*/
 }

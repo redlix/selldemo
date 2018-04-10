@@ -1,6 +1,7 @@
 package com.redli.sell.service.impl;
 
 import com.redli.sell.dataobject.ProductInfo;
+import com.redli.sell.enums.ProductStatusEnum;
 import com.redli.sell.repository.ProductInfoRepository;
 import com.redli.sell.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return repository.findByProductStatus(0);
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
     @Override
@@ -41,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
         return repository.save(productInfo);
     }
 
-    @Override
+   /* @Override
     public void increaseStock() {
 
     }
@@ -59,5 +60,5 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductInfo offSale(String productId) {
         return null;
-    }
+    }*/
 }
