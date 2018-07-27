@@ -1,6 +1,7 @@
 package com.redli.sell.service;
 
 import com.redli.sell.dataobject.ProductInfo;
+import com.redli.sell.dto.CartDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -26,11 +27,33 @@ public interface ProductService {
 
     ProductInfo save(ProductInfo productInfo);
 
-   /* void increaseStock();
+    /**
+     * 加库存
+     *
+     * @param cartDTOList
+     */
+    void increaseStock(List<CartDTO> cartDTOList);
 
-    void decreaseStock();
+    /**
+     * 减库存
+     *
+     * @param cartDTOList
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 
+    /**
+     * 上架.
+     *
+     * @param productId
+     * @return
+     */
     ProductInfo onSale(String productId);
 
-    ProductInfo offSale(String productId);*/
+    /**
+     * 下架.
+     *
+     * @param productId
+     * @return
+     */
+    ProductInfo offSale(String productId);
 }

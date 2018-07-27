@@ -1,5 +1,8 @@
 package com.redli.sell.dataobject;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.redli.sell.enums.ProductStatusEnum;
+import com.redli.sell.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -60,4 +63,9 @@ public class ProductInfo {
     private Date createTime;
 
     private Date updateTime;
+
+    @JsonIgnore
+    public ProductStatusEnum getProductStatusEnum() {
+        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+    }
 }
