@@ -7,5 +7,10 @@ package com.redli.sell.enums;
  * @description:
  */
 public interface CodeEnum {
+    /**
+     * 获取code
+     *
+     * @return
+     */
     Integer getCode();
 }

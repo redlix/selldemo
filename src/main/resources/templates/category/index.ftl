@@ -15,11 +15,13 @@
                     <form role="form" method="post" action="/sell/seller/category/save">
                         <div class="form-group">
                             <label>名字</label>
-                            <input name="categoryName" type="text" class="form-control" value="${(category.categoryName)!''}"/>
+                            <input name="categoryName" type="text" class="form-control"
+                                   value="${(category.categoryName)!''}"/>
                         </div>
                         <div class="form-group">
                             <label>type</label>
-                            <input name="categoryType" type="number" class="form-control" value="${(category.categoryType)!''}"/>
+                            <input name="categoryType" type="number" class="form-control"
+                                   value="${(category.categoryType)!''}"/>
                         </div>
                         <input hidden type="text" name="categoryId" value="${(category.categoryId)!''}">
                         <button type="submit" class="btn btn-default">提交</button>
@@ -28,7 +30,6 @@
             </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>

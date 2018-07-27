@@ -14,8 +14,14 @@ public enum OrderStatusEnum implements CodeEnum {
     FINISHED(1, "完结"),
     CANCEL(2, "已取消"),;
 
+    /**
+     * code
+     */
     private Integer code;
 
+    /**
+     * message
+     */
     private String message;
 
     OrderStatusEnum(Integer code, String message) {
